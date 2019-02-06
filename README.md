@@ -16,3 +16,7 @@ Download an automated build from the public Docker Hub Registry:
 You can add a workspace as a volume directory with the argument *-v /your-path/c9ws/:/c9ws/* like this :
 
     docker run -d -p 80:80 -v /your-path/c9ws/:/c9ws/ fullaxx/cloud9-jessie
+
+## Build it locally using the Dockerfile on github
+
+    docker build -t="fullaxx/cloud9-jessie" github.com/Fullaxx/cloud9-jessie

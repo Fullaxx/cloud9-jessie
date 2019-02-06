@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # Pull base image.
-FROM debian:8-slim
+FROM debian:jessie-slim
 MAINTAINER Brett Kuskie <fullaxx@gmail.com>
 
 # ------------------------------------------------------------------------------
