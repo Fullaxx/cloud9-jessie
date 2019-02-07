@@ -16,7 +16,7 @@ RUN ln -s nodejs /usr/bin/node
 # ------------------------------------------------------------------------------
 # Install Cloud9
 RUN git clone https://github.com/c9/core.git /c9 && \
-cd /c9 && ./scripts/install-sdk.sh && mkdir /c9ws /var/log/supervisor
+cd /c9 && ./scripts/install-sdk.sh && mkdir /c9ws
 
 # ------------------------------------------------------------------------------
 # Add supervisord conf
