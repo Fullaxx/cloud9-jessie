@@ -13,7 +13,7 @@ Debian 8 (x64)
 
 ## Save your Cloud9 workspace on the host
 
-    docker run -d -p 80:80 -v /your/pathh/c9ws/:/c9ws/ fullaxx/cloud9-jessie
+    docker run -d -p 80:80 -v /your/path/c9ws/:/c9ws/ fullaxx/cloud9-jessie
 
 ## Build it locally using the github repository
 
