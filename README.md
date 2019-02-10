@@ -1,22 +1,20 @@
 # A Cloud9 docker image based on Debian 8 (Jessie)
 
 ## Base Docker Image
-Debian 8
+Debian 8 (x64)
 
-## Get the image
-
-Download an automated build from the public Docker Hub Registry:
+## Get the image from Docker Hub
 
     docker pull fullaxx/cloud9-jessie
 
-## Usage
+## Run the image on port 80
 
     docker run -d -p 80:80 fullaxx/cloud9-jessie
 
-You can add a workspace as a volume directory with the argument *-v /your-path/c9ws/:/c9ws/* like this :
+## Save your Cloud9 workspace on the host
 
-    docker run -d -p 80:80 -v /your-path/c9ws/:/c9ws/ fullaxx/cloud9-jessie
+    docker run -d -p 80:80 -v /your/pathh/c9ws/:/c9ws/ fullaxx/cloud9-jessie
 
-## Build it locally using the Dockerfile on github
+## Build it locally using the github repository
 
     docker build -t="fullaxx/cloud9-jessie" github.com/Fullaxx/cloud9-jessie
