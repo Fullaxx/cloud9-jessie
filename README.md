@@ -16,5 +16,13 @@ docker run -d -p 80:80 fullaxx/cloud9-jessie
 
 ## Save your Cloud9 workspace on the host
 ```
-docker run -d -p 80:80 -v /your/path/c9ws/:/c9ws/ fullaxx/cloud9-jessie
+docker run -d -p 80:80 -v /srv/docker/c9ws/:/c9ws/ fullaxx/cloud9-jessie
+```
+
+## Use Basic Auth when connecting
+```
+docker run -d -p 80:80 \
+-e C9USER=user -e C9PASS=pass \
+-v /srv/docker/c9ws/:/c9ws/ \
+fullaxx/cloud9-jessie
 ```
