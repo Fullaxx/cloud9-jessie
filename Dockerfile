@@ -1,7 +1,4 @@
 # ------------------------------------------------------------------------------
-# Thanks to https://github.com/kdelfour/cloud9-docker
-# Thanks to https://github.com/tghastings/cloud9-docker
-# ------------------------------------------------------------------------------
 # Pull base image
 FROM debian:jessie-slim
 MAINTAINER Brett Kuskie <fullaxx@gmail.com>
@@ -10,7 +7,7 @@ MAINTAINER Brett Kuskie <fullaxx@gmail.com>
 # Set environment variables
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C
-ENV NODEPKGURL https://nodejs.org/dist/latest-v0.12.x/node-v0.12.18-linux-x64.tar.xz
+ENV NODEPKGURL https://nodejs.org/dist/v16.14.2/node-v16.14.2-linux-x64.tar.xz
 
 # ------------------------------------------------------------------------------
 # Install base and clean up
