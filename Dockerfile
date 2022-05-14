@@ -12,7 +12,7 @@ ENV NODEPKGURL https://nodejs.org/dist/v16.14.2/node-v16.14.2-linux-x64.tar.xz
 # ------------------------------------------------------------------------------
 # Install base and clean up
 RUN apt-get update && apt-get install -y --no-install-recommends \
-	  build-essential g++ locales curl git ca-certificates python2.7-minimal && \
+	  build-essential ca-certificates curl g++ git locales python2.7-minimal && \
 	sed -e 's/# en_US.UTF-8/en_US.UTF-8/' -i /etc/locale.gen && locale-gen && \
 	apt-get clean && rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
 
