@@ -27,8 +27,8 @@ RUN curl -s ${NODEPKGURL} -o /tmp/node.tar.xz && \
 	ln -s /opt/node/bin/npm /usr/bin/npm && \
 	git clone https://github.com/c9/core.git /c9 && \
 	cd /c9 && ./scripts/install-sdk.sh && \
-	rm -rf /opt/node /usr/bin/{node,nodejs,npm} && \
-	rm -rf /root/.c9/{libevent-*,ncurses-*,tmux-*} && \
+	rm -rf /opt/node /usr/bin/node /usr/bin/nodejs /usr/bin/npm && \
+	rm -rf /root/.c9/libevent-* /root/.c9/ncurses-* /root/.c9/tmux-* && \
 	rm -rf /c9/.git /root/.c9/tmp /root/.npm /root/.node-gyp /tmp/* && \
 	mkdir /c9ws
 
