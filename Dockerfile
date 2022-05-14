@@ -30,6 +30,8 @@ RUN curl -s ${NODEPKGURL} -o /tmp/node.tar.xz && \
 	rm -rf /opt/node /usr/bin/node /usr/bin/nodejs /usr/bin/npm && \
 	rm -rf /root/.c9/libevent-* /root/.c9/ncurses-* /root/.c9/tmux-* && \
 	rm -rf /c9/.git /root/.c9/tmp /root/.npm /root/.node-gyp /tmp/* && \
+	PATH="$PATH:/root/.c9/node/bin" npm install -g c9 && \
+	sed -e 's@/sbin:/bin@/sbin:/bin:/root/.c9/node/bin@' -i /etc/profile && \
 	mkdir /c9ws
 
 # ------------------------------------------------------------------------------
